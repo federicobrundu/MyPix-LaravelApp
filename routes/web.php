@@ -2,16 +2,7 @@
 
 use App\Http\Controllers\Admin\PhotoController;
 use Illuminate\Support\Facades\Route;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,5 +18,14 @@ Route::get('/', function () {
     This means there is no need to manually define each individual route for actions like index, store, show, update, and destroy, 
     making the code cleaner and easier to manage.
 */
-Route::resource('photos', [PhotoController::class]);
+Route::resource('photos', PhotoController::class, [
+    'names' => [
+        'index' => 'photos.index',
+        'show' => 'photos.show',
+        'store' => 'photos.store',
+        'update' => 'photos.update',
+        'destroy' => 'photos.destroy'
+    ]
+]);
+
 
