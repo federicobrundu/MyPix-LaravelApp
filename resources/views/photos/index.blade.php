@@ -1,3 +1,7 @@
+@extends('layouts.layout-bootstrap')
+
+@section('content')
+    
 @if(count($photos) == 0)
 
 <h1 class="text-center">You have 0 photos</h1>
@@ -8,10 +12,10 @@
         
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Title</th>
+            <th>ID</th>
+            <th>Titolo</th>
             <th>Url</th>
-            <th>Preview</th>
+            <th>Anteprima</th>
 
         </tr>
     </thead>
@@ -47,3 +51,5 @@
 </table>    
 
 @endif
+
+@endsection
