@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Photo extends Model
 {
     use HasFactory;
-
     /* Ai  model tendenzialmente va associata una tabella sul db
         Questo processo viene eseguito utilizzando le migration messe
         a disposizione da Laravel;
